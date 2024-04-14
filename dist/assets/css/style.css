@@ -1,0 +1,508 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a {
+    color: inherit;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.eot");
+  src: url("../fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff"), url("../fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+  src: url("../fonts/Poppins-SemiBold.eot");
+  src: url("../fonts/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff"), url("../fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+  src: url("../fonts/Poppins-Medium.eot");
+  src: url("../fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff"), url("../fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+  src: url("../fonts/Poppins-Bold.eot");
+  src: url("../fonts/Poppins-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Bold.woff2") format("woff2"), url("../fonts/Poppins-Bold.woff") format("woff"), url("../fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+    font-family: "Poppins";
+    font-weight: 400;
+    color: black;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 30px;
+}
+
+.title {
+    color: rgb(7, 7, 7);
+    font-size: 2.125rem;
+    font-weight: 600;
+    line-height: 3.1875rem;
+}
+
+.header {
+    padding-top: 46px;
+    background-color: #f1f1f1;
+    min-height: 100vh;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 32px;
+    position: relative;
+    padding: 0px 12px 3px 0px;
+}
+
+.logo::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background: rgb(253, 163, 0);
+    border-radius: 50%;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 0 50px;
+}
+
+.nav__link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+.nav__link.active {
+    color: rgb(129, 129, 129);
+}
+
+.nav__button {
+    display: none;
+}
+
+.header-row {
+    margin-top: 4.75rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 1.875rem;
+}
+
+.header-content {
+    margin-top: 7.75rem;
+    max-width: 500px;
+}
+
+.header-content__heading {
+    font-size: 2.75rem;
+    font-weight: 600;
+    line-height: 4.125rem;
+    margin-bottom: 20px;
+}
+
+.header-content__descr {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 200%;
+}
+
+.services {
+    padding: 5.625rem 0;
+}
+
+.services__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 1.875rem;
+}
+
+.services__card {
+    flex: 1 1 auto;
+}
+
+.services__img {
+    margin-bottom: 1.875rem;
+}
+
+.services__title {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.25rem;
+    margin-bottom: 0.625rem;
+}
+
+.services__descr {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 200%;
+}
+
+.portfolio {
+    background: rgb(241, 241, 241);
+    padding: 5.625rem 0;
+}
+
+.portfolio__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.portfolio__title {
+    margin-bottom: 4.375rem;
+}
+
+.project:not(:last-child) {
+    margin-bottom: 5.625rem;
+}
+
+.project__img {
+    border: 1px solid rgb(203, 203, 203);
+    margin-bottom: 2.5rem;
+}
+
+.project__img img {
+    position: relative;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.project__title {
+    color: rgb(7, 7, 7);
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6875rem;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.project__title a {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.project__title a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+  /* Изменяем с "left" на "right" */
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+  /* Начальное значение - скрыть подчеркивание */
+    transform-origin: left;
+  /* Изменяем начальную точку трансформации */
+    transition: transform 0.3s ease-in-out;
+  /* Анимация для появления */
+}
+
+.project__title a:hover::before {
+    transform: scaleX(1);
+  /* Показать подчеркивание при наведении */
+}
+
+.footer {
+    padding: 5.625rem 0;
+}
+
+.footer__title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.footer--content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer--content__descr {
+    color: rgb(7, 7, 7);
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6875rem;
+    letter-spacing: 0%;
+    max-width: 296px;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.footer--content__button {
+    position: relative;
+    background-color: black;
+    padding: 7.24px 22.96px 7.76px 22.53px;
+    border-radius: 25px;
+    margin-bottom: 5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.footer--content__button:hover,
+.footer--content__button:focus {
+    background-color: #323232;
+}
+
+.footer--content__button:active {
+    top: 2px;
+    background-color: black;
+}
+
+.footer--content__button a {
+    color: rgb(255, 255, 255);
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6875rem;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.footer--content__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 3.75rem;
+}
+
+.footer--content__footer {
+    margin-top: 2.5rem;
+    color: rgb(130, 130, 130);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.3125rem;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+@media (max-width: 1230px) {
+    .nav.open .nav__list {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        z-index: 1;
+        padding: 2.875rem 1.875rem;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 2.5rem 0;
+    }
+
+    .nav__list {
+        display: none;
+    }
+
+    .nav__link {
+        font-size: 2.125rem;
+        font-weight: 600;
+        color: rgb(130, 130, 130);
+    }
+
+    .nav__link.active {
+        color: black;
+    }
+
+    .nav__button {
+        display: block;
+        position: absolute;
+        z-index: 100;
+        top: 2.875rem;
+        right: 1.875rem;
+    }
+
+    .header-row {
+        flex-direction: column;
+        margin-top: 3.125rem;
+        gap: 1.25rem 0;
+    }
+
+    .header-content {
+        margin-top: 0;
+    }
+
+    .header-img {
+        text-align: center;
+    }
+
+    .services {
+        padding: 3.625rem 0;
+    }
+
+    .services__row {
+        flex-wrap: wrap;
+        gap: 5.125rem;
+    }
+
+    .portfolio {
+        padding: 3.625rem 0;
+    }
+
+    .portfolio__title {
+        margin-bottom: 2.375rem;
+    }
+
+    .project:not(:last-child) {
+        margin-bottom: 2.375rem;
+    }
+
+    .footer {
+        padding: 3.625rem 0;
+    }
+
+    .footer--content__social {
+        gap: 0 1.75rem;
+    }
+}
+
+@media (max-width: 770px) {
+    .header-content__heading {
+        font-size: 34px;
+        line-height: 3.125rem;
+    }
+
+    .header-content__heading span {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 550px) {
+    .header-img__bg img {
+        position: relative;
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+}

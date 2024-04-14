@@ -1,0 +1,81 @@
+.footer {
+    padding: 5.625rem 0;
+    @media (max-width: 1230px) {
+        padding: 3.625rem 0;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+}
+.footer--content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__descr {
+        color: rgb(7, 7, 7);
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 1.6875rem;
+        letter-spacing: 0%;
+        max-width: 296px;
+        text-align: center;
+
+        margin-bottom: 2.5rem;
+    }
+
+    &__button {
+        position: relative;
+        background-color: black;
+        padding: 7.24px 22.96px 7.76px 22.53px;
+        border-radius: 25px;
+        margin-bottom: 5rem;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out 0s;
+
+        &:hover,
+        &:focus {
+            background-color: #323232;
+        }
+
+        &:active {
+            top: 2px;
+            background-color: black;
+        }
+
+        a {
+            color: rgb(255, 255, 255);
+            font-size: 1.125rem;
+            font-weight: 400;
+            line-height: 1.6875rem;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 3.75rem;
+
+        @media (max-width: 1230px) {
+            gap: 0 1.75rem;
+        }
+    }
+
+    &__item {
+    }
+
+    &__footer {
+        margin-top: 2.5rem;
+        color: rgb(130, 130, 130);
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.3125rem;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+}
